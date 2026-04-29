@@ -1,0 +1,31 @@
+@font-face {
+  font-family: 'AlfaSlabOne-Regular';
+  src: url('../fonts/Alfa_Slab_One/AlfaSlabOne-Regular.eot'); /* IE9+ */
+  src: url('../fonts/Alfa_Slab_One/AlfaSlabOne-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/Alfa_Slab_One/AlfaSlabOne-Regular.woff2') format('woff2'), /* Navegadores modernos */
+       url('../fonts/Alfa_Slab_One/AlfaSlabOne-Regular.woff') format('woff'), /* Navegadores estándar */
+       url('../fonts/Alfa_Slab_One/AlfaSlabOne-Regular.ttf') format('truetype'); /* Safari, Android, iOS */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'ElmsSans-Regular';
+  src: url('../fonts/Elms_Sans/ElmsSans-Regular.eot'); /* IE9+ */
+  src: url('../fonts/Elms_Sans/ElmsSans-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/Elms_Sans/ElmsSans-Regular.woff2') format('woff2'), /* Navegadores modernos */
+       url('../fonts/Elms_Sans/ElmsSans-Regular.woff') format('woff'), /* Navegadores estándar */
+       url('../fonts/Elms_Sans/ElmsSans-Regular.ttf') format('truetype'); /* Safari, Android, iOS */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: ;
+    src: url();
+}
+
+@font-face {
+    font-family: ;
+    src: url();
+}
