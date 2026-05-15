@@ -84,6 +84,7 @@ body{
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    min-height: 300px;
 }
 .box-2{
     width:50%;
@@ -97,6 +98,43 @@ body{
 .box-2 img{
     width: 50%;
 }
+
+.carrusel{
+    margin: 100px auto;
+    width: 95%;
+    display: flex;
+    overflow-x: auto;
+}
+.carrusel::-webkit-scrollbar{
+    display: none;
+}
+.grupo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    animation: spin 25s infinite linear;
+    padding-right: 1em;
+}
+.card{
+    flex: 0 0 6em;
+    height: 6em;
+    padding: 1em;
+    font-size: 3rem;
+    border-radius: .2em;
+    text-align: center;
+    align-content: center;
+}
+.card img{
+    width: 100%;
+}
+
+@keyframes spin{
+    from {translate: 0;}
+    to {translate: -100%;}
+}
+
+/*---------IDS-------------------*/
  #negocio1{
     padding:30px;
     color:rgb(0, 0, 0);
@@ -119,6 +157,10 @@ body{
     font-family: AlfaSlabOne-Regular;
     text-transform: uppercase;
     font-size: 2.5vw;
+ }
+
+ #clientes{
+    background-color: rgb(77, 77, 77);
  }
 
 
