@@ -3,6 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="DWeb desarrollo" />
+    <meta property="og:description" content="Desarrollo web profesional" />
+    <meta property="og:image" content="https://dwebdesarrollo/imgs/Logo2026.png">
+    <meta property="og:url" content="https://dwebdesarrollo.com.ar/" />
+
     <title>Desarrollo Web</title>
     <link rel="icon" href="imgs/icono2026.ico" type="image/png">
 
@@ -10,17 +18,18 @@
     <link rel="stylesheet" href="css/estilos.css">
 
     <link rel="stylesheet" href="formulario-css-grid-master/css/estilos.css">
+    <link rel="stylesheet" href="css/icomoon/style.css">
 </head>
 <body>
-    <header>
+    <header id="header">
        <div id="menu_cont">
             <img class="logo" src="imgs/Logo2026.png" alt="">
 
             <ul class="menu" data-animation="menu">
-                <li class="li"><a href="#">Servicios</a></li>
-                <li class="li"><a href="#">Acerca de nosotros</a></li>
-                <li class="li"><a href="#">Clientes</a></li>
-                <li class="li"><a href="#">Contacto</a></li>
+                <li class="li"><a href="#header">Inicio</a></li>
+                <li class="li"><a href="#negocio">Servicios</a></li>
+                <li class="li"><a href="#clientes">Clientes</a></li>
+                <li class="li"><a href="#contacto">Contacto</a></li>
             </ul>
             <figure class="nav__logo">
                 <img src="assets/menu.svg" class="nav__img">
@@ -30,6 +39,7 @@
     <section id="slogan">
         <h3>Desarrollo web para</h3>
         <h1>pymes</h1>
+        <a href="https://wa.me/5493584831904" target="_blank" id="btn_slogan"> <img src="imgs/wp.png" alt=""> <div>Consúltenos</div></a>
     </section>
     <section id="negocio" class="seccion">
         <div id="negocio1" class="box-2">
@@ -91,79 +101,118 @@
     <section id="servicios" class="seccion">
         
     </section>
-    <section id="contacto" class="seccion">
-        <h3>CONTACTENOS</h3>
-        <form action="envio.php" method="post" class="formulario" id="formulario">
+    <footer id="contacto" >
+        <div id="form_container">
+            <h2>Déjenos su consulta</h2>
+            <form action="envio.php" method="post" class="formulario" id="formulario">
 
-            <!-- Grupo: Nombre -->
-            <div class="formulario__grupo" id="grupo__nombre">
-                <label for="nombre" class="formulario__label">Nombre</label>
-                <div class="formulario__grupo-input">
-                    <input type="text" class="formulario__input" name="nombre" id="nombre"
-                        placeholder="Nombre" minlength="5" maxlength="40" required>
-                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                <!-- Grupo: Nombre -->
+                <div class="formulario__grupo" id="grupo__nombre">
+                    <label for="nombre" class="formulario__label">Nombre</label>
+                    <div class="formulario__grupo-input">
+                        <input type="text" class="formulario__input" name="nombre" id="nombre"
+                            placeholder="Nombre" minlength="5" maxlength="40" required>
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo
+                        puede
+                        contener numeros, letras y guion bajo.</p>
                 </div>
-                <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo
-                    puede
-                    contener numeros, letras y guion bajo.</p>
-            </div>
 
-            <!-- Grupo: Teléfono -->
-            <div class="formulario__grupo" id="grupo__telefono">
-                <label for="telefono" class="formulario__label">Teléfono</label>
-                <div class="formulario__grupo-input">
-                    <input type="number" class="formulario__input" name="telefono" id="telefono"
-                        placeholder="4491234567" required>
-                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                <!-- Grupo: Teléfono -->
+                <div class="formulario__grupo" id="grupo__telefono">
+                    <label for="telefono" class="formulario__label">Teléfono</label>
+                    <div class="formulario__grupo-input">
+                        <input type="number" class="formulario__input" name="telefono" id="telefono"
+                            placeholder="4491234567" required>
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="formulario__input-error">El telefono solo puede contener numeros y el maximo
+                        son 14
+                        dígitos.</p>
                 </div>
-                <p class="formulario__input-error">El telefono solo puede contener numeros y el maximo
-                    son 14
-                    dígitos.</p>
-            </div>
 
-            <!-- Grupo: Correo Electronico -->
-            <div class="formulario__grupo" id="grupo__correo">
-                <label for="correo" class="formulario__label">Correo Electrónico</label>
-                <div class="formulario__grupo-input">
-                    <input type="email" class="formulario__input" name="correo" id="correo"
-                        placeholder="correo@correo.com" required>
-                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                <!-- Grupo: Correo Electronico -->
+                <div class="formulario__grupo" id="grupo__correo">
+                    <label for="correo" class="formulario__label">Correo Electrónico</label>
+                    <div class="formulario__grupo-input">
+                        <input type="email" class="formulario__input" name="correo" id="correo"
+                            placeholder="correo@correo.com" required>
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="formulario__input-error">El correo solo puede contener letras, numeros,
+                        puntos, guiones
+                        y guion bajo.</p>
                 </div>
-                <p class="formulario__input-error">El correo solo puede contener letras, numeros,
-                    puntos, guiones
-                    y guion bajo.</p>
-            </div>
 
-            <!-- Grupo: Mensaje -->
-            <div class="formulario__grupo" id="grupo__mensaje">
-                <label for="mensaje" class="formulario__label">Mensaje</label>
-                <div class="formulario__grupo-input">
-                    <textarea type="text" class="formulario__input" name="mensaje" id="mensaje"
-                        placeholder="Su mensaje..." minlength="1" maxlength="400" required></textarea>
+                <!-- Grupo: Mensaje -->
+                <div class="formulario__grupo" id="grupo__mensaje">
+                    <label for="mensaje" class="formulario__label">Mensaje</label>
+                    <div class="formulario__grupo-input">
+                        <textarea type="text" class="formulario__input" name="mensaje" id="mensaje"
+                            placeholder="Su mensaje..." minlength="1" maxlength="400" required></textarea>
+                    </div>
                 </div>
-            </div>
 
-            <div class="formulario__mensaje" id="formulario__mensaje">
-                <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el
-                    formulario
-                    correctamente. </p>
-            </div>
+                <div class="formulario__mensaje" id="formulario__mensaje">
+                    <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el
+                        formulario
+                        correctamente. </p>
+                </div>
 
-            <div class="formulario__grupo formulario__grupo-btn-enviar">
-                <input type="submit" class="formulario__btn" name="boton" value="Enviar">
+                <div class="formulario__grupo formulario__grupo-btn-enviar">
+                    <input type="submit" class="formulario__btn" name="boton" value="Enviar">
 
-            </div>
+                </div>
             </form>
-    </section>
-    
-    
-    <footer>
-
+        </div>
+        <div id="dates_container">
+            <div id="datos">   
+                    <h3>Contáctenos</h3> 
+                    <p><span class="icon-phone icono"></span> <strong> Teléfono</strong> <br>
+                                                            +54 9 358 4831904</p>
+                    <p><span class="icon-mail4 icono"></span><strong> Correo electrónico</strong> <br>
+                                                        info@dwebdesarrollo.com.ar</p>
+                    <p><span class="icon-location icono"></span> Anisacate, Córdoba, Argentina</p>
+            </div>
+        </div>
     </footer>
+    
     <div class="wp">
         <a href="https://wa.me/5493584831904" target="_blank"><img id="wp" src="imgs/wp.png"></a>
     </div>
     
     <script src="js/menu.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- -------- SCROLL SMOTH  --------->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 1000, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
 </body>
 </html>
